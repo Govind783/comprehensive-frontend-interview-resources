@@ -32,6 +32,10 @@ const R = () => {
     <div className="min-h-screen bg-gray-950 text-white p-6 flex flex-col items-center">
       <div className="w-full max-w-2xl space-y-6">
         <h1 className="text-2xl font-bold text-center mb-4">LRU Cache Fetcher</h1>
+        <p className="text-sm text-center mb-4">
+          On fetching data for the same one, the data comes from the cache instead of an API call. To avoid growing the
+          data structure infinitely, we keep removing entries following the LRU policy.
+        </p>
 
         {Array.from({ length: 7 }).map((_, index) => {
           const page = index + 1;
@@ -39,10 +43,7 @@ const R = () => {
           const cacheMiss = cacheStatus[page] === "miss";
 
           return (
-            <div
-              key={index}
-              className="bg-gray-900 rounded-lg p-4 shadow-lg border border-gray-800 space-y-2"
-            >
+            <div key={index} className="bg-gray-900 rounded-lg p-4 shadow-lg border border-gray-800 space-y-2">
               <div className="flex justify-between items-center">
                 <Button
                   // className="bg-blue-600 hover:bg-blue-700"
@@ -55,9 +56,7 @@ const R = () => {
 
                     setCacheStatus((prev) => ({ ...prev, [page]: "miss" }));
 
-                    const res = await fetch(
-                      `https://jsonplaceholder.typicode.com/posts?_page=${page}`
-                    );
+                    const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}`);
                     const data = await res.json();
 
                     setData1((prev) => ({
@@ -79,11 +78,7 @@ const R = () => {
                       : "text-gray-400"
                   }`}
                 >
-                  {cacheHit
-                    ? "Cache Hit"
-                    : cacheMiss
-                    ? "Cache Miss"
-                    : "Not Fetched"}
+                  {cacheHit ? "Cache Hit" : cacheMiss ? "Cache Miss" : "Not Fetched"}
                 </span>
               </div>
 

@@ -67,7 +67,7 @@ const CopilotlikeAutoComplete = () => {
     clearSuggestionHandler();
     const shadowSpan = document.createElement("span");
     shadowSpan.innerText = remainingString;
-    shadowSpan.className = "text-gray-300";
+    shadowSpan.className = "text-gray-400";
     mockEditorRef.current.appendChild(shadowSpan);
   };
 
@@ -90,15 +90,19 @@ const CopilotlikeAutoComplete = () => {
   };
 
   const clearSuggestionHandler = () => {
-    document.querySelectorAll(".text-gray-300").forEach((i) => i.remove());
+    document.querySelectorAll(".text-gray-400").forEach((i) => i.remove());
   };
   const optimizedAutomComplete = debounce(onChangeHandler);
   return (
-    <div className="flex w-screen h-screen justify-center items-center">
+    <div className="flex w-screen h-screen justify-center flex-col gap-10 items-center">
+      <div className="font-semibold text-center text-gray-500">
+      <p className="text-2xl">Type a fruit name, apple for example 🍎 </p>
+      <p className="text-lg">and upon auto-compplete press Tab</p>
+      </div>
       <div
         contentEditable="true"
         ref={mockEditorRef}
-        className="border border-gray-500 w-96 h-96"
+        className="border border-gray-500 w-96 h-96 rounded-md p-4"
         onInput={optimizedAutomComplete}
         onKeyDown={accceptSuggestionHandler}
       ></div>

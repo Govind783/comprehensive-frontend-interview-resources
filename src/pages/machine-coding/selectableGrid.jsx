@@ -5,7 +5,8 @@ const SelectableGrid = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [selected, setSelected] = useState(new Set());
   return (
-    <div className="flex w-screen h-screen justify-center items-center">
+    <div className="flex w-screen h-screen flex-col gap-10 justify-center items-center">
+      <p className="text-xl font-semibold">Right click and drag on the cells</p>
       <div className="grid grid-cols-5 w-fit gap-2">
         {data.map((item) => {
           return (

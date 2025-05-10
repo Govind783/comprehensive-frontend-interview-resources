@@ -247,7 +247,7 @@ const Tree = ({ items, setData, depth = 1 }) => {
           if (item.children) {
             return (
               <AccordionItem key={item.id} className="relative" value={item.id}>
-                <div style={{ marginLeft: `${depth * 4}px` }}>
+                <div style={{ marginLeft: `${depth * 8}px` }}>
                   <AccordionTrigger className="hover:no-underline group">
                     <div className="flex items-center gap-2">
                       <Folder
@@ -301,13 +301,13 @@ const Tree = ({ items, setData, depth = 1 }) => {
               <div
                 key={item.id}
                 className="flex cursor-pointer items-center gap-2 py-2 hover:text-white group"
-                style={{ marginLeft: `${depth * 4}px` }}
+                style={{ marginLeft: `${depth * 8}px` }}
               >
                 <File
                   size={20}
                   className="text-gray-500 group-hover:text-white transition-colors duration-200"
                 />
-                <div className="w-4 h-0.5 bg-gray-800" />
+                <div className="w-4 h-0.5 bg-gray-500" />
                 {item.name}
                 <div className="opacity-0 group-hover:opacity-100 flex items-center gap-3 ml-4 transition-all duration-200">
                   <Plus

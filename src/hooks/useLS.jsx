@@ -1,23 +1,27 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
-export const usePersistData = (key, initialValue) => {
-  const [data, setData] = useState(initialValue);
+function useLS(key, initialValue) {
+  const [value, setValue] = useState(() => {
+    try {
+      const stored = localStorage.getItem(key);
+      return stored !== null ? JSON.parse(stored) : initialValue;
+    } catch (err) {
+      console.warn("useLS: Error reading localStorage", err);
+      return initialValue;
+    }
+  });
 
   useEffect(() => {
     try {
-      const x = localStorage.getItem(key);
-      setData(x ? JSON.parse(x) : []);
-    } catch (e) {
-      console.log("something went wrong while parsing", e);
-      setData([]);
+      localStorage.setItem(key, JSON.stringify(value));
+    } catch (err) {
+      console.warn("useLS: Error writing to localStorage", err);
     }
-  }, []);
+  }, [key, value]);
 
-  return data;
-};
+  return [value, setValue];
+}
 
-const SaveData = (key, val) => {
-  if (typeof window !== "undefined") {
-    localStorage.setItem(key, JSON.stringify(val));
-  }
-};
+
+// example usage
+// const [theme, setTheme] = useLS('theme', 'dark');

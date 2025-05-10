@@ -16,7 +16,8 @@ const R = () => {
     };
   });
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
+    <div className="w-screen h-screen flex flex-col gap-10 justify-center items-center">
+      <p className="text-xl font-semibold text-gray-300">Infinite scrolling on 10,000 items virtualized, (No library)</p>
       <div
         className="bg-gray-800 rounded-md p-8 relative overflow-auto"
         style={{
