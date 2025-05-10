@@ -40,7 +40,7 @@ If you find this helpful, **star the repo 🌟** and let's connect on [Twitter](
 ---
 
 ## 🧩 Images of What We've Built Under Machine Coding (and Many More)
-Nested checkbox where cheecking parent, should check the children as well, and vice verse
+Nested checkbox where cheecking parent, should check the children as well, and vice versa
 ![image](https://github.com/user-attachments/assets/b53d870c-d3a8-4073-9f9c-a976e92dd331)
 
 ---
