@@ -40,11 +40,32 @@ If you find this helpful, **star the repo 🌟** and let's connect on [Twitter](
 ---
 
 ## 🧩 Images of What We've Built Under Machine Coding (and Many More)
+Nested checkbox where cheecking parent, should check the children as well, and vice verse
 ![image](https://github.com/user-attachments/assets/b53d870c-d3a8-4073-9f9c-a976e92dd331)
+
+---
+Reciepe auto complete with caching and debouncing
 ![image](https://github.com/user-attachments/assets/01839951-1e57-42f0-bbee-1304c6ed8a16)
+
+---
+Selectable grid, with mouse events in place
 ![image](https://github.com/user-attachments/assets/80202bbb-67e5-484c-af39-34c2b3943843)
+
+---
+auto compplete on specific characters and bank names, trigger auto complete after "@"
 ![image](https://github.com/user-attachments/assets/c43af37a-0be2-485a-bd14-f0320b93be3a)
+---
+auto complete with tab support where we show a suggestion first (grayed out) and on click of tab complete it
 ![image](https://github.com/user-attachments/assets/3e0072fa-4b5b-47a2-8f04-2f91f5c33923)
+
+Infinite scrolling
+---
 ![image](https://github.com/user-attachments/assets/effcb132-49cb-4295-b451-f1d0aa4a4e50)
+
+---
+LRU caching
 ![image](https://github.com/user-attachments/assets/1eb8bd7d-6380-41db-be80-697d6c3f1f70)
+---
+
+VS-code like file tree with CRUD
 ![image](https://github.com/user-attachments/assets/2ecb1650-ab30-426a-8b08-7b3e0cc0ad9f)
